@@ -40,7 +40,7 @@ At first, I wasn’t sure how nested routing and layouts worked in the new App R
 ### Key Takeaways:
 
 - Tailwind CSS speeds up layout design significantly.
-- Form libraries like `react-hook-form` reduce boilerplate and improve validation workflows.
+- Form libraries like react-hook-form reduce boilerplate and improve validation workflows.
 - A clean folder structure is key to scaling any React/Next.js app.
 
 ---
