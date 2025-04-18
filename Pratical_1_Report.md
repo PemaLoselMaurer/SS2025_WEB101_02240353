@@ -29,7 +29,7 @@ Configured with:
 - App Router: Yes
 
 ### Folder Structure
-
+```
 src/
 ├── app/
 │   ├── explore/
@@ -44,7 +44,7 @@ src/
 │   └── ui/
 ├── lib/
 └── styles/
-
+```
 ---
 
 ## Layout and Components
