@@ -1,0 +1,27 @@
+{
+  "name": "tiktok-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
+    "@tailwindcss/postcss": "^4.1.3",
+    "@tanstack/react-query": "^5.74.3",
+    "@tanstack/react-query-devtools": "^5.74.3",
+    "autoprefixer": "^10.4.21",
+    "axios": "^1.8.4",
+    "jwt-decode": "^4.0.0",
+    "next": "^15.3.0",
+    "postcss": "^8.5.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.55.0",
+    "react-hot-toast": "^2.5.2",
+    "react-icons": "^4.12.0",
+    "tailwindcss": "^4.0.14"
+  }
+}

@@ -1,0 +1,214 @@
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #333; /* Neutral dark text */
+  background-color: #f5f5f5; /* Light gray background */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary-color: #87ceeb; /* Sky blue */
+  --primary-hover: #4682b4; /* Steel blue for hover */
+  --container-bg: #ffffff; /* White background for containers */
+  --shadow-color: rgba(135, 206, 235, 0.3); /* Sky blue shadow */
+  --button-gradient: linear-gradient(135deg, #87ceeb, #4682b4); /* Button gradient */
+  --background-gradient: linear-gradient(to bottom, #e0f7fa, #87ceeb); /* Sky gradient */
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: var(--background-gradient); /* Sky gradient background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.App {
+  text-align: center;
+}
+
+.todo-container {
+  background: var(--container-bg); /* White card */
+  padding: 20px 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px var(--shadow-color);
+  width: 100%;
+  max-width: 350px; /* Reduce the maximum width */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todo-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(135, 206, 235, 0.5); /* Enhanced shadow on hover */
+}
+
+h1 {
+  font-size: 28px;
+  color: var(--primary-color); /* Sky blue for the title */
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.todo-stats {
+  margin: 20px 0 15px; /* Adjust bottom margin to balance spacing with the button */
+  font-size: 16px;
+  color: #5f6368; /* Neutral gray for stats */
+}
+
+p {
+  margin: 5px 0;
+}
+
+button {
+  background: var(--button-gradient); /* Gradient background */
+  color: #ffffff; /* White text */
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px rgba(135, 206, 235, 0.3); /* Sky blue shadow */
+  margin-top: 15px; /* Add spacing above the button */
+}
+
+button:hover {
+  background: var(--primary-hover); /* Steel blue on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(135, 206, 235, 0.5); /* Enhanced shadow */
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 5px rgba(135, 206, 235, 0.3);
+}
+
+.todo-list-item {
+  color: #212121; /* Darker gray for better visibility */
+  font-size: 16px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between checkbox and delete button */
+  background-color: #ffffff; /* White background for list items */
+  padding: 8px 12px; /* Reduce padding for a smaller container */
+  border-radius: 6px; /* Slightly smaller border radius */
+  box-shadow: 0 2px 4px rgba(135, 206, 235, 0.3); /* Subtle shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todo-list-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(135, 206, 235, 0.5); /* Enhanced shadow on hover */
+}
+
+.todo-list-item label {
+  color: #333; /* Neutral dark text for better visibility */
+  font-size: 16px;
+  margin-left: 10px; /* Add spacing between checkbox and text */
+}
+
+.todo-list-item.completed {
+  text-decoration: line-through;
+  color: #888888; /* Medium gray for completed items */
+}
+
+.todo-list-item.completed label {
+  text-decoration: line-through;
+  color: #888888; /* Medium gray for completed items */
+}
+
+input[type="text"] {
+  background-color: #e0f7fa; /* Light cyan background */
+  color: #333; /* Dark gray text color */
+  border: 1px solid #87ceeb; /* Sky blue border */
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary-hover); /* Steel blue border on focus */
+  box-shadow: 0 0 5px rgba(70, 130, 180, 0.5); /* Steel blue shadow */
+  background-color: #ffffff; /* White background on focus */
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #87ceeb; /* Sky blue border */
+  border-radius: 4px;
+  background-color: #ffffff; /* White background */
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  margin-right: 8px; /* Reduce spacing between checkbox and text */
+}
+
+input[type="checkbox"]:checked {
+  background-color: #87ceeb; /* Sky blue background when checked */
+  border-color: #4682b4; /* Steel blue border when checked */
+  position: relative;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '✔';
+  font-size: 12px;
+  color: #ffffff; /* White checkmark */
+  position: absolute;
+  top: 2px;
+  left: 3px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button.delete-button {
+  background: #ff6b6b; /* Red gradient for delete button */
+  color: #ffffff; /* White text */
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px rgba(255, 107, 107, 0.3); /* Subtle red shadow */
+  margin-left: 8px; /* Reduce spacing between text and delete button */
+}
+
+button.delete-button:hover {
+  background: #d9534f; /* Darker red on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(255, 107, 107, 0.5); /* Enhanced shadow */
+}
+
+button.delete-button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 5px rgba(255, 107, 107, 0.3);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
