@@ -1,36 +1,41 @@
-import styles from './app.css';
+import './App.css';
 
-export default function Dashboard() {
+import MonthlySalesChart from './components/MonthlySalesChart';
+import ProductCategoryChart from './components/ProductCategoryChart';
+import CustomerAcquisitionChart from './components/CustomerAcquisitionChart';
+import WeeklyVisitorsChart from './components/WeeklyVisitorsChart';
+
+export default function App() {
   return (
-    <main className={styles.main}>
+    <main className="main">
       <h1>Sales Analytics Dashboard</h1>
 
-      <div className={styles.grid}>
-        <section className={styles.card}>
+      <div className="grid">
+        <section className="card">
           <h2>Monthly Sales Performance</h2>
-          <div className={styles.chartContainer} id="monthly-sales-chart">
-            {/* Chart will go here */}
+          <div className="chartContainer">
+            <MonthlySalesChart />
           </div>
         </section>
 
-        <section className={styles.card}>
+        <section className="card">
           <h2>Product Category Distribution</h2>
-          <div className={styles.chartContainer} id="product-category-chart">
-            {/* Chart will go here */}
+          <div className="chartContainer">
+            <ProductCategoryChart />
           </div>
         </section>
 
-        <section className={styles.card}>
+        <section className="card">
           <h2>Customer Acquisition</h2>
-          <div className={styles.chartContainer} id="customer-acquisition-chart">
-            {/* Chart will go here */}
+          <div className="chartContainer">
+            <CustomerAcquisitionChart />
           </div>
         </section>
 
-        <section className={styles.card}>
+        <section className="card">
           <h2>Weekly Visitors</h2>
-          <div className={styles.chartContainer} id="weekly-visitors-chart">
-            {/* Chart will go here */}
+          <div className="chartContainer">
+            <WeeklyVisitorsChart />
           </div>
         </section>
       </div>
